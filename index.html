@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Technical Documentation page</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav id="navbar">
+  <header>
+    <h1>CSS Flexbox Documentation </h1>
+  </header>
+  <ul>
+  <li><a class="nav-link" href="#introduction"> Introduction</a></li>
+  <li><a class="nav-link" href="#enable_flexbox">Enable Flexbox</a></li>
+  <li><a class="nav-link" href="#flex_direction">Flex Direction</a></li>
+ <li><a class="nav-link" href="#justify_content">Justify Content</a></li>
+  <li><a class="nav-link" href="#align_items">Align Items</a></li>
+    <li><a class="nav-link" href="#flex_wrap">Flex Wrap</a></li>
+    <li><a class="nav-link" href="#reference">Reference</a></li>
+  </ul>
+</nav>
+
+<main id="main-doc">
+  <section class="main-section" id="introduction"><header>Introduction</header>
+    <article>
+   <p>The Flexible Box Module, known as Flexbox, is one of two modern layout systems. As a one-dimensional layout model, it controls the layout based on a row or a column.</p>
+
+<p>The main goal of flex box is to allow items fill the whole space of their container, based on rules you set.</p>
+    </article>
+    </section>
+  <section class="main-section" id="enable_flexbox"><header>Enable Flexbox</header>
+    <article>
+      <p> To apply the flexbox layout to a container, set the following</p><code>display: flex;</code><p>or</p>
+<code>display: inline-flex;</code><p>Placing this CSS property on an element allows you to use other flex properties. The content <strong>inside the container</strong> will be aligned using flexbox.</p>
+      <p>To set general rules for the container’s items, the following flexbox properties can be applied:</p>
+<ul>
+<li><code>flex-direction</code></li>
+<li><code>justify-content</code></li>
+<li><code>align-items</code></li>
+<li><code>flex-wrap</code></li>
+<li><code>flex-flow</code></li>
+</ul>
+    </article>
+    </section>
+   <section class="main-section" id="flex_direction"><header>Flex Direction</header>
+     <article>
+       <p>The <code>flex-direction</code> property determines if the container should align its items as a row or columns as follows:</p>
+       <ul>
+<li><code>flex-direction: row</code> places items as a <strong>row</strong>, in the text direction left to right</li>
+<li><code>flex-direction:row-reverse</code> places items like <code>row</code> but it the <strong>opposite direction</strong></li>
+<li><code>flex-direction:column</code> places items as a <strong>column</strong> ordering top to bottom</li>
+<li><code>flex-direction:column-reverse</code> places items like <code>column</code> but in opposite direction</li>
+</ul>
+       <p>By default, items start from the left if <code>flex-direction</code> is set to row, and the top if <code>flex-direction</code> is set to column.</p>
+       </article>
+         </section>
+  <section class="main-section" id="justify_content"><header>Justify Content</header>
+   <article>
+     <p>The <code>justify-content</code> property tell the CSS how to align and space  out flex items along it’s main axis, or the direction in which they are arranged. There are 6 common values for this property:</p>
+<ul>
+<li><code>center</code>: aligns all flex items to the center inside the flex container; this is the most common property</li>
+<li><code>flex-start</code>: aligns items to the start of the container. In a row, pushes items to the left; in a columns, pushes items to the top. **This is the default alignment if no <code>justify-content</code> value is selected.</li>
+<li><code>flex-end</code>: aligns items to the end of the container.</li>
+<li><code>space-between</code>: aligns items to center of main axis, with extra space placed between items. The first and last items are pushed to the edge of the flex container.</li>
+<li><code>space-around</code>: similar to <code>space-between</code> but first and last items are not locked to the edge of the container.  Space is distributed all around the items with 1/2 space on either end of the container.</li>
+<li><code>space-evenly</code>: Distributes space evenly between the flex container items with a full space at either end of the container.</li>
+</ul>
+</article>
+    </section>
+  <section class="main-section" id="align_items"><header>Align Items</header>
+ <article>
+   <p>The <code>align-items</code> property works similar to <code>justify-content</code> except it aligns flex items along the cross axis rather than the main axis. For rows, it tells how to push items up or down; for columns, how to push left to right.</p>
+<p>There are 5 values for this property:</p>
+<ul>
+<li><code>flex-start</code>: align to the start of the container (top or left)</li>
+<li><code>flex-end</code>: align to the end of the container (bottom or right)</li>
+<li><code>center</code>: align to the  vertical center of the container</li>
+<li><code>stretch</code>: items are stretched to fit the container.  *Default value if no value is specified.</li>
+<li><code>baseline</code>: align to the baseline of the container</li>
+</ul>
+   </article>
+    </section>
+  <section class="main-section" id="flex_wrap"><header>Flex Wrap</header>
+    <article>
+      <p>By default, items in a flexbox container are kept on a single line, shrinking them to fit the container. To force items to spread across multiple lines, is the <code>flex-wrap</code> property. By setting this property, extra items move into a new row or column.</p>
+<p>The break point of where wrapping happens depends on the size of the items or the size of the container.</p>
+<p>The following values can be applied:</p>
+<ul>
+<li><code>nowrap</code>: default value, does not wrap items</li>
+<li><code>wrap</code>: wraps items from left to right if in rows, or top to bottom if in columns</li>
+<li><code>wrap-reverse</code>: reverses direction - either right to left or bottom to top</li>
+</ul>
+    </article>
+  </section>
+<section class="main-section" id="reference"><header>Reference</header>
+  <article>
+    <p>All documentation for this page is taken from the following sources:</p>
+    <ul>
+      <li><a href="https://flaviocopes.nyc3.digitaloceanspaces.com/css-handbook/css-handbook.pdf" target="blank">The CSS Handbook by Flavio Copes</a>
+        </li>
+      <li><a href="https://www.freecodecamp.org/learn/" target="blank">Freecodecamp.org</a></li>
+    </ul>
+  </article>
+</section>
+  
+</main>
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<!-- partial -->
+  
+</body>
+</html>
